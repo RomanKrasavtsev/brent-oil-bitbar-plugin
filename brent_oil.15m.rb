@@ -15,7 +15,7 @@ require "open-uri"
 def get_rate
    user_agent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_0) AppleWebKit/535.2 (KHTML, like Gecko) Chrome/15.0.854.0 Safari/535.2"
 
-   rate = Nokogiri::HTML(open("http://www.investing.com/commodities/brent-oil", 'User-Agent' => user_agent), nil, "UTF-8")
+   rate = Nokogiri::HTML(open("https://www.investing.com/commodities/brent-oil", 'User-Agent' => user_agent), nil, "UTF-8")
      .css(".pid-8833-last").first
      .to_s
      .gsub(/<span class="arial_26 inlineblock pid-8833-last" id="last_last" dir="ltr">/, "")
